@@ -7,7 +7,7 @@
             <ColumnDefinition Width="17*"/>
             <ColumnDefinition Width="423*"/>
         </Grid.ColumnDefinitions>
-        <Label Content="Készítették: ....." HorizontalAlignment="Left" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <Label Content="Beolvasandó fájl neve:" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
 
         <TextBox Name="txtFajlNev" Width="200" Height="25" Margin="10,30,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
         <Button Content="Beolvasás" Width="100" Height="30" Margin="10,60,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Beolvasas_Click" Grid.ColumnSpan="2"/>
@@ -18,22 +18,25 @@
 
         <GroupBox Header="Mit számoljunk?" Width="200" Height="100" Margin="196,110,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1">
             <StackPanel>
-                <RadioButton Name="radio1" Content="Bajnokok száma"/>
-                <RadioButton Name="radio2" Content="Ország szereplései"/>
+                <RadioButton Name="radio1" Content=""/>
+                <RadioButton Name="radio2" Content=""/>
             </StackPanel>
         </GroupBox>
 
         <Button Content="Megszámolás" Width="100" Height="30" Margin="196,220,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Megszamolas_Click" Grid.Column="1"/>
 
-        <ComboBox Name="comboMinMax" Width="150" Height="25" Margin="196,270,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1">
+        <ComboBox Name="comboMinMax" Width="150" Height="25" Margin="196,288,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1">
             <ComboBoxItem Content="Minimum"/>
             <ComboBoxItem Content="Maximum"/>
         </ComboBox>
-        <Button Content="Minimum / Maximum kiválasztása" Width="200" Height="30" Margin="196,300,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="MinMax_Click" Grid.Column="1"/>
+        <Button Content="Minimum / Maximum kiválasztása" Width="200" Height="30" Margin="196,318,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="MinMax_Click" Grid.Column="1"/>
 
-        <TextBox Name="txtOrszagKeres" Width="150" Height="25" Margin="466,30,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1"/>
-        <CheckBox Name="chkKijeloles" Content="Találatok kijelölése a listában" Margin="466,60,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1"/>
-        <Button Content="Keresés" Width="100" Height="30" Margin="466,90,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Kereses_Click" Grid.Column="1"/>
+        <TextBox Name="txtOrszagKeres" Width="150" Height="25" Margin="423,36,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1"/>
+        <CheckBox Name="chkKijeloles" Content="Találatok kijelölése a listában" Margin="423,66,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1"/>
+        <Button Content="Keresés" Width="100" Height="30" Margin="423,96,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Kereses_Click" Grid.Column="1"/>
         <Image Margin="541,198,108,34" Source="/Image2.png" Stretch="Fill" Grid.Column="1"/>
+        <Label Content="Fájl neve kiíráshoz:" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="196,0,0,0"/>
+        <Label Content="Minimum vagy maximum?" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="196,257,0,0"/>
+        <Label Content="Ország keresése:" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="423,10,0,0"/>
     </Grid>
 </Window>
