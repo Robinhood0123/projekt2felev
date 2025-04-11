@@ -37,5 +37,30 @@ namespace VBfoci
             }
 
         }
+
+        private void Beolvasas_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Kiiras_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Kereses_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Megszamolas_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void MinMax_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
