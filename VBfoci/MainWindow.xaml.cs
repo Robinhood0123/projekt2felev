@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,21 @@ namespace VBfoci
     /// </summary>
     public partial class MainWindow : Window
     {
+        static List<Resztvevo> resztvevok = new List<Resztvevo>();
         public MainWindow()
         {
             InitializeComponent();
+            Beolvasas();
+
+        }
+        static void Beolvasas()
+        {
+            var sorok = File.ReadAllLines("VBfoci.csv").Skip(1);
+            foreach (var sor in sorok)
+            {
+                resztvevok.Add(new Resztvevo(sor));
+            }
+
         }
     }
 }

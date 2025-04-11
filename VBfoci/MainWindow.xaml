@@ -1,12 +1,39 @@
 ﻿<Window x:Class="VBfoci.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:VBfoci"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="Készítették: Tóth Róbert, Ács Norbert, Szentpáli Richárd Sándor" Height="400" Width="900">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="423*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Készítették: ....." HorizontalAlignment="Left" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+
+        <TextBox Name="txtFajlNev" Width="200" Height="25" Margin="10,30,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <Button Content="Beolvasás" Width="100" Height="30" Margin="10,60,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Beolvasas_Click" Grid.ColumnSpan="2"/>
+        <ListBox Name="listEredmenyek" Width="200" Height="150" Margin="10,100,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+
+        <TextBox Name="txtKiirasFajlba" Width="200" Height="25" Margin="196,30,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1"/>
+        <Button Content="Kiírás" Width="100" Height="30" Margin="196,60,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Kiiras_Click" Grid.Column="1"/>
+
+        <GroupBox Header="Mit számoljunk?" Width="200" Height="100" Margin="196,110,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1">
+            <StackPanel>
+                <RadioButton Name="radio1" Content="Bajnokok száma"/>
+                <RadioButton Name="radio2" Content="Ország szereplései"/>
+            </StackPanel>
+        </GroupBox>
+
+        <Button Content="Megszámolás" Width="100" Height="30" Margin="196,220,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Megszamolas_Click" Grid.Column="1"/>
+
+        <ComboBox Name="comboMinMax" Width="150" Height="25" Margin="196,270,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1">
+            <ComboBoxItem Content="Minimum"/>
+            <ComboBoxItem Content="Maximum"/>
+        </ComboBox>
+        <Button Content="Minimum / Maximum kiválasztása" Width="200" Height="30" Margin="196,300,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="MinMax_Click" Grid.Column="1"/>
+
+        <TextBox Name="txtOrszagKeres" Width="150" Height="25" Margin="466,30,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1"/>
+        <CheckBox Name="chkKijeloles" Content="Találatok kijelölése a listában" Margin="466,60,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1"/>
+        <Button Content="Keresés" Width="100" Height="30" Margin="466,90,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Kereses_Click" Grid.Column="1"/>
+        <Image Margin="541,198,108,34" Source="/Image2.png" Stretch="Fill" Grid.Column="1"/>
     </Grid>
 </Window>

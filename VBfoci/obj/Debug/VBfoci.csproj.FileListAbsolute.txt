@@ -1,0 +1,15 @@
+C:\Users\totrob846\Documents\GitHub\projekt2felev\VBfoci\bin\Debug\VBfoci.exe.config
+C:\Users\totrob846\Documents\GitHub\projekt2felev\VBfoci\bin\Debug\VBfoci.exe
+C:\Users\totrob846\Documents\GitHub\projekt2felev\VBfoci\bin\Debug\VBfoci.pdb
+C:\Users\totrob846\Documents\GitHub\projekt2felev\VBfoci\obj\Debug\VBfoci.csproj.AssemblyReference.cache
+C:\Users\totrob846\Documents\GitHub\projekt2felev\VBfoci\obj\Debug\MainWindow.g.cs
+C:\Users\totrob846\Documents\GitHub\projekt2felev\VBfoci\obj\Debug\App.g.cs
+C:\Users\totrob846\Documents\GitHub\projekt2felev\VBfoci\obj\Debug\VBfoci_MarkupCompile.cache
+C:\Users\totrob846\Documents\GitHub\projekt2felev\VBfoci\obj\Debug\VBfoci_MarkupCompile.lref
+C:\Users\totrob846\Documents\GitHub\projekt2felev\VBfoci\obj\Debug\MainWindow.baml
+C:\Users\totrob846\Documents\GitHub\projekt2felev\VBfoci\obj\Debug\VBfoci.g.resources
+C:\Users\totrob846\Documents\GitHub\projekt2felev\VBfoci\obj\Debug\VBfoci.Properties.Resources.resources
+C:\Users\totrob846\Documents\GitHub\projekt2felev\VBfoci\obj\Debug\VBfoci.csproj.GenerateResource.cache
+C:\Users\totrob846\Documents\GitHub\projekt2felev\VBfoci\obj\Debug\VBfoci.csproj.CoreCompileInputs.cache
+C:\Users\totrob846\Documents\GitHub\projekt2felev\VBfoci\obj\Debug\VBfoci.exe
+C:\Users\totrob846\Documents\GitHub\projekt2felev\VBfoci\obj\Debug\VBfoci.pdb
