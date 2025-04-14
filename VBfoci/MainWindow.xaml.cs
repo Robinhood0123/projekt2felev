@@ -76,6 +76,39 @@ namespace VBfoci
         private void Kereses_Click(object sender, RoutedEventArgs e)
         {
 
+            string keresettOrszag = txtOrszagKeres.Text;
+            var szurtEredmenyek = new List<string>();
+
+            foreach (var item in listEredmenyek.Items)
+            {
+                string sor = item.ToString();
+                if (sor.Contains(keresettOrszag))
+                {
+                    szurtEredmenyek.Add(sor);
+                }
+            }
+
+            if (szurtEredmenyek.Any())
+            {
+                var eredmenyekSzoveg = string.Join("\n", szurtEredmenyek);
+                MessageBox.Show($"Talált eredmények:\n{eredmenyekSzoveg}");
+
+                File.WriteAllLines("eredmenyek.txt", szurtEredmenyek);
+
+                if (chkKijeloles.IsChecked == true)
+                {
+                    listEredmenyek.SelectedItems.Clear();
+                    foreach (var eredmeny in szurtEredmenyek)
+                    {
+                        listEredmenyek.SelectedItems.Add(eredmeny);
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Nincs találat a keresett országra.");
+            }
+
         }
 
         private void Megszamolas_Click(object sender, RoutedEventArgs e)
@@ -116,7 +149,7 @@ namespace VBfoci
 
         private void MinMax_Click(object sender, RoutedEventArgs e)
         {
-
+            
         }
     }
 }
