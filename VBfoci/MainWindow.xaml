@@ -1,4 +1,4 @@
-﻿<Window x:Class="VBfoci.MainWindow"
+﻿    <Window x:Class="VBfoci.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Készítették: Tóth Róbert, Ács Norbert, Szentpáli Richárd Sándor" Height="420" Width="740">
@@ -25,18 +25,18 @@
 
         <Button Content="Megszámolás" Width="100" Height="30" Margin="196,220,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Megszamolas_Click" Grid.Column="1"/>
 
-        <ComboBox Name="comboMinMax" Width="150" Height="25" Margin="196,288,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1">
-            <ComboBoxItem Content="Minimum"/>
-            <ComboBoxItem Content="Maximum"/>
+        <ComboBox Name="comboRosszJobb" Width="150" Height="25" Margin="196,288,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1">
+            <ComboBoxItem Content="Legjobb helyezés"/>
+            <ComboBoxItem Content="Legrosszabb helyezés"/>
         </ComboBox>
-        <Button Content="Minimum / Maximum kiválasztása" Width="200" Height="30" Margin="196,318,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="MinMax_Click" Grid.Column="1"/>
+        <Button Content="Mutasd" Width="200" Height="30" Margin="196,318,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="RosszJobb_Click" Grid.Column="1"/>
 
         <TextBox Name="txtOrszagKeres" Width="150" Height="25" Margin="423,36,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1"/>
         <CheckBox Name="chkKijeloles" Content="Találatok kijelölése a listában" Margin="423,66,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1"/>
         <Button Content="Keresés" Width="100" Height="30" Margin="423,96,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Kereses_Click" Grid.Column="1"/>
-        <Image Margin="449,201,49,31" Source="/Image2.png" Stretch="Fill" Grid.Column="1"/>
+        <Image Margin="423,181,36,25" Source="/Image2.png" Stretch="Fill" Grid.Column="1"/>
         <Label Content="Fájl neve kiíráshoz:" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="196,0,0,0"/>
-        <Label Content="Minimum vagy maximum?" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="196,257,0,0"/>
+        <Label Content="Legjobb vagy Legrosszabb?" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="196,257,0,0"/>
         <Label Content="Ország keresése:" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="423,10,0,0"/>
     </Grid>
 </Window>

@@ -118,7 +118,6 @@ namespace VBfoci
         {
             if (rdbLeggyakoribbHelyszin.IsChecked == true)
             {
-                // Leggyakoribb helyszín kiszámítása
                 Dictionary<string, int> helyszinSzam = new Dictionary<string, int>();
 
                 foreach (Resztvevo adat in resztvevok)
@@ -148,7 +147,6 @@ namespace VBfoci
             }
             else if (rdbAtlagosHelyezes.IsChecked == true)
             {
-                // Átlagos helyezés kiszámítása
                 int osszeg = 0;
                 foreach (Resztvevo adat in resztvevok)
                 {
@@ -156,17 +154,18 @@ namespace VBfoci
                 }
 
                 double atlag = (double)osszeg / resztvevok.Count;
-                MessageBox.Show("Átlagos helyezés: " + atlag.ToString("0.00"));
+                MessageBox.Show("Átlagos helyezés: " + atlag.ToString());
             }
             else
             {
                 MessageBox.Show("Kérlek válassz egy opciót!");
             }
         }
+
+
         // A MinMax_Click eseménykezelo megkeresi a legjobb és legrosszabb helyezést a résztvevők közül.
         // Készítette: Tóth Róbert
-
-        private void MinMax_Click(object sender, RoutedEventArgs e)
+        private void RoszJobb_Click(object sender, RoutedEventArgs e)
         {
             if (resztvevok.Count == 0)
             {
@@ -174,13 +173,25 @@ namespace VBfoci
                 return;
             }
 
-            var legjobb = resztvevok.OrderBy(r => r.Helyezes).First();
-            var legrosszabb = resztvevok.OrderByDescending(r => r.Helyezes).First();
+            var legjobb = resztvevok.OrderBy(r => r.Helyezes).ThenBy(r => r.Ev).First();
+            
+            var legrosszabb = resztvevok.OrderByDescending(r => r.Helyezes).ThenBy(r => r.Ev).First();
 
-            string uzenet = $"Legjobb helyezés:\n{legjobb.Ev} - {legjobb.Orszag} ({legjobb.Helyezes}. hely) - {legjobb.Helyszin}\n\n" +
-                            $"Legrosszabb helyezés:\n{legrosszabb.Ev} - {legrosszabb.Orszag} ({legrosszabb.Helyezes}. hely) - {legrosszabb.Helyszin}";
-
-            MessageBox.Show(uzenet, "Minimum és Maximum");
+            string uzenet;
+            if (comboRosszJobb.SelectedIndex == 0) 
+            {
+                uzenet = $"Legjobb helyezés:\n{legjobb.Ev} - {legjobb.Orszag} ({legjobb.Helyezes}. hely) - {legjobb.Helyszin}";
+                MessageBox.Show(uzenet, "Minimum");
+            }
+            else if (comboRosszJobb.SelectedIndex == 1)
+            {
+                uzenet = $"Legrosszabb helyezés:\n{legrosszabb.Ev} - {legrosszabb.Orszag} ({legrosszabb.Helyezes}. hely) - {legrosszabb.Helyszin}";
+                MessageBox.Show(uzenet, "Maximum");
+            }
+            else
+            {
+                MessageBox.Show("Kérlek válassz Minimum vagy Maximum értéket!");
+            }
         }
     }
 }

@@ -8,12 +8,13 @@ namespace VBfoci
 {
     internal class Resztvevo
     {
+        //Készítette: Tóth Róbert, Ács Norbert
         public string Orszag { get; set; }
         public int Helyezes { get; set; }
         public int Ev { get; set; }
         public string Helyszin { get; set; }
 
-
+        //pontosvesszővel elválasztott szövegből töltjük fel az adatokat
         public Resztvevo(string sor) 
         {
             var adatok = sor.Split(';');
