@@ -30,7 +30,7 @@ namespace VBfoci
         }
         static void Beolvasas()
         {
-            var sorok = File.ReadAllLines("VBfoci.csv").Skip(1);
+            var sorok = File.ReadAllLines("VBfoci.csv", Encoding.UTF8).Skip(1);
             foreach (var sor in sorok)
             {
                 resztvevok.Add(new Resztvevo(sor));
@@ -68,6 +68,9 @@ namespace VBfoci
                 string sor = adat.Orszag + "; " + adat.Helyezes + "; " + adat.Ev + "; " + adat.Helyszin;
                 iro.WriteLine(sor);
             }
+
+            txtKiirasFajlba.Background = Brushes.LightGreen;
+
 
             iro.Close();
             MessageBox.Show("A kiírás sikeresen befejeződött!");
@@ -113,43 +116,71 @@ namespace VBfoci
 
         private void Megszamolas_Click(object sender, RoutedEventArgs e)
         {
-            int osszeg = 0;
-            Dictionary<string, int> helyszinSzam = new Dictionary<string, int>();
-
-            foreach (Resztvevo adat in resztvevok)
+            if (rdbLeggyakoribbHelyszin.IsChecked == true)
             {
-                osszeg += adat.Helyezes;
+                // Leggyakoribb helyszín kiszámítása
+                Dictionary<string, int> helyszinSzam = new Dictionary<string, int>();
 
-                if (helyszinSzam.ContainsKey(adat.Helyszin))
+                foreach (Resztvevo adat in resztvevok)
                 {
-                    helyszinSzam[adat.Helyszin]++;
+                    if (helyszinSzam.ContainsKey(adat.Helyszin))
+                    {
+                        helyszinSzam[adat.Helyszin]++;
+                    }
+                    else
+                    {
+                        helyszinSzam.Add(adat.Helyszin, 1);
+                    }
                 }
-                else
+
+                string leggyakoribb = "";
+                int maxdb = 0;
+                foreach (var par in helyszinSzam)
                 {
-                    helyszinSzam.Add(adat.Helyszin, 1);
+                    if (par.Value > maxdb)
+                    {
+                        maxdb = par.Value;
+                        leggyakoribb = par.Key;
+                    }
                 }
+
+                MessageBox.Show("Leggyakoribb helyszín: " + leggyakoribb);
             }
-
-            double atlag = (double)osszeg / resztvevok.Count;
-
-            string leggyakoribb = "";
-            int maxdb = 0;
-            foreach (var par in helyszinSzam)
+            else if (rdbAtlagosHelyezes.IsChecked == true)
             {
-                if (par.Value > maxdb)
+                // Átlagos helyezés kiszámítása
+                int osszeg = 0;
+                foreach (Resztvevo adat in resztvevok)
                 {
-                    maxdb = par.Value;
-                    leggyakoribb = par.Key;
+                    osszeg += adat.Helyezes;
                 }
+
+                double atlag = (double)osszeg / resztvevok.Count;
+                MessageBox.Show("Átlagos helyezés: " + atlag.ToString("0.00"));
             }
-
-            MessageBox.Show("Átlagos helyezés: " + atlag.ToString() +"\nLeggyakoribb helyszín: " + leggyakoribb);
-
+            else
+            {
+                MessageBox.Show("Kérlek válassz egy opciót!");
+            }
         }
+        // A MinMax_Click eseménykezelo megkeresi a legjobb és legrosszabb helyezést a résztvevők közül.
+        // Készítette: Tóth Róbert
 
         private void MinMax_Click(object sender, RoutedEventArgs e)
         {
-            
+            if (resztvevok.Count == 0)
+            {
+                MessageBox.Show("Nincsenek adatok betöltve.");
+                return;
+            }
+
+            var legjobb = resztvevok.OrderBy(r => r.Helyezes).First();
+            var legrosszabb = resztvevok.OrderByDescending(r => r.Helyezes).First();
+
+            string uzenet = $"Legjobb helyezés:\n{legjobb.Ev} - {legjobb.Orszag} ({legjobb.Helyezes}. hely) - {legjobb.Helyszin}\n\n" +
+                            $"Legrosszabb helyezés:\n{legrosszabb.Ev} - {legrosszabb.Orszag} ({legrosszabb.Helyezes}. hely) - {legrosszabb.Helyszin}";
+
+            MessageBox.Show(uzenet, "Minimum és Maximum");
         }
     }
 }

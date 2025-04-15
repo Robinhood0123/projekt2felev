@@ -40,3 +40,17 @@ C:\Users\szent\Documents\GitHub\projekt2felev\VBfoci\obj\Debug\VBfoci.csproj.Gen
 C:\Users\szent\Documents\GitHub\projekt2felev\VBfoci\obj\Debug\VBfoci.csproj.CoreCompileInputs.cache
 C:\Users\szent\Documents\GitHub\projekt2felev\VBfoci\obj\Debug\VBfoci.exe
 C:\Users\szent\Documents\GitHub\projekt2felev\VBfoci\obj\Debug\VBfoci.pdb
+C:\Users\tothr\OneDrive\Dokumentumok\GitHub\projekt2felev\VBfoci\bin\Debug\VBfoci.exe.config
+C:\Users\tothr\OneDrive\Dokumentumok\GitHub\projekt2felev\VBfoci\bin\Debug\VBfoci.exe
+C:\Users\tothr\OneDrive\Dokumentumok\GitHub\projekt2felev\VBfoci\bin\Debug\VBfoci.pdb
+C:\Users\tothr\OneDrive\Dokumentumok\GitHub\projekt2felev\VBfoci\obj\Debug\VBfoci.csproj.AssemblyReference.cache
+C:\Users\tothr\OneDrive\Dokumentumok\GitHub\projekt2felev\VBfoci\obj\Debug\MainWindow.baml
+C:\Users\tothr\OneDrive\Dokumentumok\GitHub\projekt2felev\VBfoci\obj\Debug\MainWindow.g.cs
+C:\Users\tothr\OneDrive\Dokumentumok\GitHub\projekt2felev\VBfoci\obj\Debug\App.g.cs
+C:\Users\tothr\OneDrive\Dokumentumok\GitHub\projekt2felev\VBfoci\obj\Debug\VBfoci_MarkupCompile.cache
+C:\Users\tothr\OneDrive\Dokumentumok\GitHub\projekt2felev\VBfoci\obj\Debug\VBfoci.g.resources
+C:\Users\tothr\OneDrive\Dokumentumok\GitHub\projekt2felev\VBfoci\obj\Debug\VBfoci.Properties.Resources.resources
+C:\Users\tothr\OneDrive\Dokumentumok\GitHub\projekt2felev\VBfoci\obj\Debug\VBfoci.csproj.GenerateResource.cache
+C:\Users\tothr\OneDrive\Dokumentumok\GitHub\projekt2felev\VBfoci\obj\Debug\VBfoci.csproj.CoreCompileInputs.cache
+C:\Users\tothr\OneDrive\Dokumentumok\GitHub\projekt2felev\VBfoci\obj\Debug\VBfoci.exe
+C:\Users\tothr\OneDrive\Dokumentumok\GitHub\projekt2felev\VBfoci\obj\Debug\VBfoci.pdb
