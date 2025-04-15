@@ -174,10 +174,12 @@ namespace VBfoci
                 MessageBox.Show("Nincsenek adatok betöltve.");
                 return;
             }
-            // Legjobb: legalacsonyabb helyezés, legkorábbi év
-            var legjobb = resztvevok.OrderBy(r => r.Helyezes).ThenBy(r => r.Ev).First();
-            // Legrosszabb: legmagasabb helyezés, legkorábbi év
-            var legrosszabb = resztvevok.OrderByDescending(r => r.Helyezes).ThenBy(r => r.Ev).First();
+            // Legalacsonyabb helyezés, azon belül legkésőbbi év kiválasztása
+            var legrosszabb = resztvevok.OrderByDescending(r => r.Helyezes).ThenBy(r => r.Ev).First(); 
+            //OrderByDescending csökkenő sorrendben rendezi az évet miután az elemeket növekvő helyezés szerint rendeztük
+
+            // Legmagasabb helyezés, azon belül legkorábbi év kiválasztása
+            var legjobb = resztvevok.OrderBy(r => r.Helyezes).OrderByDescending(r => r.Ev).First(); 
 
             string uzenet;
             if (comboRosszJobb.SelectedIndex == 0) 
