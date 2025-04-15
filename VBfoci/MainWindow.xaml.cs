@@ -37,7 +37,7 @@ namespace VBfoci
             }
 
         }
-
+        //készitette:Ács Norbert
         private void Beolvasas_Click(object sender, RoutedEventArgs e)
         {
             string fajlNev = txtFajlNev.Text;
@@ -56,7 +56,7 @@ namespace VBfoci
                 listEredmenyek.Items.Add(szoveg);
             }
         }
-
+        //készitette:Ács Norbert
         private void Kiiras_Click(object sender, RoutedEventArgs e)
         {
             string fajlNev = txtKiirasFajlba.Text;
@@ -113,11 +113,12 @@ namespace VBfoci
             }
 
         }
-
+        //készitette:Ács Norbert
         private void Megszamolas_Click(object sender, RoutedEventArgs e)
         {
             if (rdbLeggyakoribbHelyszin.IsChecked == true)
             {
+                //kulcs–érték (key–value) párokat tároló adatszerkezet
                 Dictionary<string, int> helyszinSzam = new Dictionary<string, int>();
 
                 foreach (Resztvevo adat in resztvevok)
