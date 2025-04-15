@@ -163,34 +163,36 @@ namespace VBfoci
         }
 
 
-        // A MinMax_Click eseménykezelo megkeresi a legjobb és legrosszabb helyezést a résztvevők közül.
+        // A RosszJobb_Click eseménykezelo megkeresi a legjobb és legrosszabb helyezést a résztvevők közül.
         // Készítette: Tóth Róbert
-        private void RoszJobb_Click(object sender, RoutedEventArgs e)
+        private void RosszJobb_Click(object sender, RoutedEventArgs e)
         {
+            // Ellenőrzi, hogy van-e adat a listában
             if (resztvevok.Count == 0)
             {
                 MessageBox.Show("Nincsenek adatok betöltve.");
                 return;
             }
-
+            // Legjobb: legalacsonyabb helyezés, legkorábbi év
             var legjobb = resztvevok.OrderBy(r => r.Helyezes).ThenBy(r => r.Ev).First();
-            
+            // Legrosszabb: legmagasabb helyezés, legkorábbi év
             var legrosszabb = resztvevok.OrderByDescending(r => r.Helyezes).ThenBy(r => r.Ev).First();
 
             string uzenet;
             if (comboRosszJobb.SelectedIndex == 0) 
             {
                 uzenet = $"Legjobb helyezés:\n{legjobb.Ev} - {legjobb.Orszag} ({legjobb.Helyezes}. hely) - {legjobb.Helyszin}";
-                MessageBox.Show(uzenet, "Minimum");
+                MessageBox.Show(uzenet, "Legjobb");
             }
             else if (comboRosszJobb.SelectedIndex == 1)
             {
                 uzenet = $"Legrosszabb helyezés:\n{legrosszabb.Ev} - {legrosszabb.Orszag} ({legrosszabb.Helyezes}. hely) - {legrosszabb.Helyszin}";
-                MessageBox.Show(uzenet, "Maximum");
+                MessageBox.Show(uzenet, "Legrosszabb");
             }
+            // Ha nincs választás
             else
             {
-                MessageBox.Show("Kérlek válassz Minimum vagy Maximum értéket!");
+                MessageBox.Show("Kérlek válasszd a Legjobbat vagy Legroszabbat!");
             }
         }
     }

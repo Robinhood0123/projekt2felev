@@ -11,16 +11,16 @@
       "RelativeMoniker": "D:0:0:{5D7DB114-52DE-4871-97E6-A7746045C0D5}|VBfoci.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{5D7DB114-52DE-4871-97E6-A7746045C0D5}|VBfoci.csproj|C:\\Users\\tothr\\OneDrive\\Dokumentumok\\GitHub\\projekt2felev\\VBfoci\\resztvevo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D7DB114-52DE-4871-97E6-A7746045C0D5}|VBfoci.csproj|solutionrelative:resztvevo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{5D7DB114-52DE-4871-97E6-A7746045C0D5}|VBfoci.csproj|C:\\Users\\tothr\\OneDrive\\Dokumentumok\\GitHub\\projekt2felev\\VBfoci\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5D7DB114-52DE-4871-97E6-A7746045C0D5}|VBfoci.csproj|solutionrelative:app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5D7DB114-52DE-4871-97E6-A7746045C0D5}|VBfoci.csproj|C:\\Users\\tothr\\OneDrive\\Dokumentumok\\GitHub\\projekt2felev\\VBfoci\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{5D7DB114-52DE-4871-97E6-A7746045C0D5}|VBfoci.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5D7DB114-52DE-4871-97E6-A7746045C0D5}|VBfoci.csproj|C:\\Users\\tothr\\OneDrive\\Dokumentumok\\GitHub\\projekt2felev\\VBfoci\\resztvevo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D7DB114-52DE-4871-97E6-A7746045C0D5}|VBfoci.csproj|solutionrelative:resztvevo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +34,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "App.xaml.cs",
               "DocumentMoniker": "C:\\Users\\tothr\\OneDrive\\Dokumentumok\\GitHub\\projekt2felev\\VBfoci\\App.xaml.cs",
               "RelativeDocumentMoniker": "App.xaml.cs",
@@ -46,18 +46,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "App.xaml",
               "DocumentMoniker": "C:\\Users\\tothr\\OneDrive\\Dokumentumok\\GitHub\\projekt2felev\\VBfoci\\App.xaml",
               "RelativeDocumentMoniker": "App.xaml",
               "ToolTip": "C:\\Users\\tothr\\OneDrive\\Dokumentumok\\GitHub\\projekt2felev\\VBfoci\\App.xaml",
               "RelativeToolTip": "App.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-14T16:44:22.159Z"
+              "WhenOpened": "2025-04-14T16:44:22.159Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "Resztvevo.cs",
               "DocumentMoniker": "C:\\Users\\tothr\\OneDrive\\Dokumentumok\\GitHub\\projekt2felev\\VBfoci\\Resztvevo.cs",
               "RelativeDocumentMoniker": "Resztvevo.cs",
@@ -65,7 +66,8 @@
               "RelativeToolTip": "Resztvevo.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-14T16:44:22.428Z"
+              "WhenOpened": "2025-04-14T16:44:22.428Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -76,7 +78,8 @@
               "ToolTip": "C:\\Users\\tothr\\OneDrive\\Dokumentumok\\GitHub\\projekt2felev\\VBfoci\\MainWindow.xaml",
               "RelativeToolTip": "MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-14T16:44:22.429Z"
+              "WhenOpened": "2025-04-14T16:44:22.429Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -86,7 +89,7 @@
               "RelativeDocumentMoniker": "MainWindow.xaml.cs",
               "ToolTip": "C:\\Users\\tothr\\OneDrive\\Dokumentumok\\GitHub\\projekt2felev\\VBfoci\\MainWindow.xaml.cs",
               "RelativeToolTip": "MainWindow.xaml.cs",
-              "ViewState": "AgIAAJIAAAAAAAAAAAAowLkAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAAK0AAAAAAAAAAAAcwMAAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-14T16:44:23.152Z",
               "EditorCaption": ""
