@@ -164,21 +164,15 @@ namespace VBfoci
         }
 
 
-        // A RosszJobb_Click eseménykezelo megkeresi a legjobb és legrosszabb helyezést a résztvevők közül.
+        // A RosszJobb_Click eseménykezelo megkeresi a legjobb és legrosszabb helyezést a résztvevők közül
         // Készítette: Tóth Róbert
         private void RosszJobb_Click(object sender, RoutedEventArgs e)
         {
-            // Ellenőrzi, hogy van-e adat a listában
-            if (resztvevok.Count == 0)
-            {
-                MessageBox.Show("Nincsenek adatok betöltve.");
-                return;
-            }
-            // Legalacsonyabb helyezés, azon belül legkésőbbi év kiválasztása
-            var legrosszabb = resztvevok.OrderByDescending(r => r.Helyezes).ThenBy(r => r.Ev).First(); 
-            //OrderByDescending csökkenő sorrendben rendezi az évet miután az elemeket növekvő helyezés szerint rendeztük
+            // Legalacsonyabb helyezés azon belül legkésőbbi év kiválasztása
+            var legrosszabb = resztvevok.OrderByDescending(r => r.Helyezes).ThenBy(r => r.Ev).First();
+            //Az OrderByDescending egy olyan rendezés ami csökkenő sorrendbe teszi az elemeket egy megadott érték alapján
 
-            // Legmagasabb helyezés, azon belül legkorábbi év kiválasztása
+            // Legmagasabb helyezés azon belül legkorábbi év kiválasztása
             var legjobb = resztvevok.OrderBy(r => r.Helyezes).OrderByDescending(r => r.Ev).First(); 
 
             string uzenet;
